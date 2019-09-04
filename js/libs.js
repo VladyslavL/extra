@@ -31,24 +31,28 @@ $(document).ready(function() {
     });
 
     var PlayButtonPosiotion = function(){
-        var button = $('.video__play'),
-            videoContainer = $('.video-js'),
+        var button = $('.video__play');
+        if (window.matchMedia("(min-width: 1025px)").matches) {
+            var videoContainer = $('.video-js'),
             videoContainerHeight = videoContainer.innerHeight(),
             headerHeight = $('header').innerHeight(),
             position = videoContainerHeight / 2 + headerHeight;
 
-        button.css({
-            "top": '' + position + 'px'
-        })
+            button.css({
+                "top": '' + position + 'px'
+            })
+        }else{
+            button.css({
+                "top": '50%'
+            })
+        }
     }
 
-    if (window.matchMedia("(min-width: 1025px)").matches) {
-        player.on('playing', function(){
+    player.on('playing', function(){
+        PlayButtonPosiotion();
+
+        $(window).resize(function(){
             PlayButtonPosiotion();
-    
-            $(window).resize(function(){
-                PlayButtonPosiotion();
-            })
         })
-    }
+    })
 });

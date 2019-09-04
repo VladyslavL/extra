@@ -644,6 +644,7 @@ textarea:-ms-input-placeholder {
     /* background-size: contain; */
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-size: cover;
 }
 
 .last_no_spacing>*:last-child:not(.button),
@@ -1897,7 +1898,7 @@ header .button.scroll_down:hover{
 }
 
 .logo img {
-    /* width: 119px */
+    width: 125px;
     height: 100%;
 }
 
