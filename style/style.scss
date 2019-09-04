@@ -1,0 +1,24 @@
+// theme variables
+$fb: 30px;
+$fp: 13px;
+$cl: #003f69;
+$tx: #fff;
+$ff: 'Helvetica Neue', sans-serif;
+$ff2: 'Cera Pro', sans-serif;
+
+// video track variables
+$video-track-color: #fff;
+$video-track-background: #003f69;
+$video-track-font-family: 'Cera Pro', sans-serif;
+$video-track-font-weight: 700;
+
+
+@import 'parts/00_mixins';
+@import 'parts/01_reset';
+@import 'parts/02_classes';
+@import 'parts/03_ui_kit';
+@import 'parts/04_apps';
+@import 'parts/05_header';
+@import 'parts/06_footer';
+
+@import 'templates/00_front_page';

@@ -1,0 +1,29 @@
+// header + main_menu
+
+header {
+  background: $cl;
+  height: 70px;
+  padding-top: 15px;
+  @include rwd-min(1025) {padding-top: 9px}
+  .button.scroll_down {
+    display: none;
+    min-width: 80px;
+    min-height: 42px;
+    line-height: 42px;
+    text-align: center;
+    @include justify-content(center);
+    @media screen and (max-width: 1024px) and (min-width: 481px) and (orientation: landscape) {@include inline-flex}
+    @media screen and (min-width: 1025px) and (max-height: 850px) {
+      &.is_shown {@include inline-flex}
+    }
+  }
+}
+
+.logo {
+  margin-left: -17px;
+  @include rwd-min(1025) {margin-left: -21px}
+  img {
+    width: 119px;
+    @include rwd-min(1025) {width: 144px}
+  }
+}

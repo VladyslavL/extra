@@ -1,0 +1,107 @@
+// style guide
+
+.button {
+  @extend %ani;
+  @include inline-flex;
+  @include align-items(center);
+  vertical-align: middle;
+  font: 700 12px/1.25 $ff;
+  letter-spacing: 0.011667em;
+  color: #fff;
+  padding: 0 14px;
+  min-height: 48px;
+  line-height: 48px;
+  min-width: 155px;
+  background: transparent;
+  box-shadow: inset 0 0 0 2px rgba(#fff, 0.3);
+  cursor: pointer;
+  @include hover {
+    background: #4e5456;
+    box-shadow: inset 0 0 0 2px rgba(#fff, 0);
+  }
+  &.is_fb {
+    background: #415893;
+    box-shadow: inset 0 0 0 2px rgba(#fff, 0);
+    @include hover {background: #415893}
+  }
+  &.is_ln {
+    background: #0075a8;
+    box-shadow: inset 0 0 0 2px rgba(#fff, 0);
+    @include hover {background: #0075a8}
+  }
+  &.is_dw {
+    background: #4e5456;
+    box-shadow: inset 0 0 0 2px rgba(#fff, 0);
+  }
+  &[disabled],
+  &.is_disabled {pointer-events: none}
+  & + .button {margin-left: 10px}
+  figure {margin-right: 20px}
+}
+.link {
+  color: inherit;
+  font-weight: 700;
+  box-shadow: 0 0;
+  @include hover {box-shadow: 0 1px}
+}
+
+h1 {
+  font: 100 34px/1.05 $ff2;
+  letter-spacing: -0.03113em;
+  @include rwd-min(768) {font-size: 62px}
+  strong {font-weight: 700}
+}
+
+p {
+  line-height: 1.69;
+  padding-bottom: rem(21);
+  &.jEmpty {padding-bottom: 0}
+}
+small, sub {
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 10px;
+}
+strong, b {font-weight: 700}
+
+.content {
+  p, li {
+    a {@extend .link}
+  }
+  ul {
+    padding-bottom: rem(21);
+    li {
+      padding-left: rem(18);
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 12px;
+        width: 4px;
+        height: 4px;
+        background: $tx;
+        border-radius: 50%;
+      }
+    }
+  }
+  img {
+    &.alignnone {margin: 0 0 rem(21)}
+    &.aligncenter {margin: 0 auto rem(21)}
+    &.alignleft {
+      float: left;
+      margin: 0 rem(21) rem(21) 0;
+    }
+    &.alignright {
+      float: right;
+      margin: 0 0 rem(21) rem(21);
+    }
+  }
+}
+
+[class^="i_"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page404 {padding: rem(60) 0}
