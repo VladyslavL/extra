@@ -1978,10 +1978,6 @@ header .button.scroll_down:hover{
     .footer__buttons .button:not(.is_share) span{
         display: none;
     }
-
-    .footer__buttons .button.is_fb_msg{
-        display: none;
-    }
 }
 
 @media screen and (max-width: 1024px) {
